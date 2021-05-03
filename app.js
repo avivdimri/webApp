@@ -8,6 +8,8 @@ var a  = new Anomaly();
 var collection = [];
 var i =0;
 //var nDate;
+var n;
+//kkk
 exports.collection = collection;
 console.log(a.avg([1,2,3,4,5],5));
 console.log(a.pearson([43,21,25,42,57,59],[99,65,79,75,87,81],6));
