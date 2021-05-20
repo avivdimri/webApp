@@ -2,16 +2,23 @@ const express = require('express')
 const app = express();
 const port = 9876;
 const bodyParser = require('body-parser');
+const fileuploding =require('express-fileupload');
 const AlgoAnomalyFile = require('./algoAnomaly');
 const { json } = require('body-parser');
+const fs = require('fs');
+
 app.use(express.json());
 app.use(express.urlencoded({
 extended: false
 }));
 var index=0;
 
+app.use(fileuploding());
 
-
+app.get('/', (req,res) => {
+    var html = fs.readFileSync('index.html' , 'utf8');
+    res.send(html);
+});
 app.get('/api/model', (req,res) => {
     if(AlgoAnomalyFile.MODELS[req.query.model_id] != undefined) {
         res.send(JSON.stringify(AlgoAnomalyFile.MODELS[req.query.model_id]))
@@ -21,6 +28,11 @@ app.get('/api/model', (req,res) => {
 });
 
 app.post('/api/model', (req,res) => {
+    console.log("inside post");
+    csvData_train = req.files.train.data.toString('utf8');
+    let data_train = parser(csvData_train);
+    csvData_test = req.files.test.data.toString('utf8');
+    let data_test = parser(csvData_test);
     let isHybrid = false;
     if(req.query.model_type ==='hybrid'){
         isHybrid = true;
@@ -33,12 +45,12 @@ app.post('/api/model', (req,res) => {
     let data = ({ model_id:  index,
         upload_time: nDate ,status: situation});
     AlgoAnomalyFile.MODELS[index] = data;  
-    res.send(JSON.stringify(data))
-    let dic={"a":[1,2,3,4,5,6,7,8,9],"b":[5,0,2,1,3,8,8,8,1], "C":[1.4,2.4,3.4,4.4,5.4,6.4,7.4,8.4,9.4], "d":[5.5,0.5,2.5,1.5,3.5,8.5,8.5,8.5,1.5]}
-    let algo = new AlgoAnomalyFile.AlgoAnomaly(req.body,isHybrid,index);
+
+    let algo = new AlgoAnomalyFile.AlgoAnomaly(data_train,isHybrid,index);
     algo.learnNormal();
+    let devion = AlgoAnomalyFile.detect(data_test,index);
+    res.send(devion);
     index++;
-    
 });
 
 app.get('/api/models', (req,res) => {
@@ -78,3 +90,20 @@ function erase(id){
     //erase from the tow data structers.
 }
 app.listen(port);
+
+function parser(csvData){
+    let arr =  csvData.split("\n");//arr hold all thee lines
+    let featuers=[];
+    featuers = arr[0].split(",");//a,b,c,d
+    let data = {}
+    for(let i=0;i<featuers.length;i++){
+        data[featuers[i]]=[];
+ }
+ for(let i = 1;i<(arr.length)-1;i++){
+    let temp = arr[i].split(',');
+     for(let j=0;j<(featuers.length);j++){
+         data[featuers[j]].push(temp[j]);
+     }
+    }
+    return data;
+}

@@ -4,7 +4,7 @@ class Anomaly {
        let i;
        let sum = 0;
        for (i = 0; i < size; i++) {
-           sum += arrx[i];
+           sum += parseFloat(arrx[i]);
        }
        let avg = sum / size;
        return avg;
@@ -15,7 +15,7 @@ class Anomaly {
        let i;
        let avgX = this.avg(x, size);
        for (i = 0; i < size; i++) {
-           sum += Math.pow(x[i] - avgX, 2);
+           sum += Math.pow(parseFloat(x[i]) - avgX, 2);
        }
        let v = sum / size;
        return v;
@@ -26,7 +26,7 @@ class Anomaly {
        let arrayZ = new Array();
        let i;
        for (i = 0; i < size; i++) {
-           arrayZ[i] = x[i] * y[i];
+           arrayZ[i] = parseFloat(x[i]) * parseFloat(y[i]);
        }
        let avgX = this.avg(x, size);
        let avgY = this.avg(y, size);

@@ -119,7 +119,7 @@ var arrSpan=[];
 
 
 function detect(dictionary, id){
-    console.log("indise detect");
+    
     let cfArr = collection_train[id];
 
    // let AnomalyReport={};
@@ -127,13 +127,11 @@ function detect(dictionary, id){
    
     let anomalies={};
     let size = cfArr.length;
-    console.log(size);
     // let size = cfArr.length;
      //Go over all the cf
     // let size = cfArr.length;
     for (let i =0; i<size;i++){
         let cf = cfArr[i];
-        console.log(cf);
         //The columns
         if(!(dictionary[cf.featcher1]) || !(dictionary[cf.featcher2] )){
            continue;
@@ -152,7 +150,6 @@ function detect(dictionary, id){
              if(num > cf.treshold){
                  //save the anomaly
                // AnomalyReport.push({feature1: cf.featcher1, feature2: cf.featcher2, index: j})
-               console.log("sholud be devion")
                 saveAnomaly(j); 
             }
                //case of circle (treshold < 0.9)
@@ -160,7 +157,6 @@ function detect(dictionary, id){
                 let num = anomaly.distance(point,cf.circle.x,cf.circle.y);
                  //there is anomaly 
                 if(num > cf.radius){
-                  //  AnomalyReport.push({feature1: cf.featcher1, feature2: cf.featcher2, index: j})
                   saveAnomaly(j); 
                 }
             }
@@ -178,7 +174,6 @@ function detect(dictionary, id){
             arrSpan=[];
         }
         return anomalies;
-         //console.log(anomalies);
     }
 
 
