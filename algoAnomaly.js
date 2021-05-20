@@ -125,7 +125,7 @@ function detect(dictionary, id){
    // let AnomalyReport={};
     //let reason=[];
    
-    let anomalies={};
+    let anomalies= new Map();
     let size = cfArr.length;
     // let size = cfArr.length;
      //Go over all the cf
@@ -163,11 +163,12 @@ function detect(dictionary, id){
 
             }
             if(start==-1){
-                anomalies[cf.featcher1]=[];
+                anomalies.set(cf.featcher1, [])
 
             }else{
                 arrSpan.push([start,end+1]);
-                anomalies[cf.featcher1]=arrSpan;
+                anomalies.set(cf.featcher1, arrSpan)
+                //anomalies[cf.featcher1]=arrSpan;
 
             }
             start=-1;

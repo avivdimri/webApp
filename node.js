@@ -26,7 +26,43 @@ app.get('/api/model', (req,res) => {
         res.sendStatus(404);
     }
 });
+function create_table(devion_data){
+    /*var myBooks = []
 
+    const iterator_map = devion_data.keys();
+
+    for(let i =0;i<devion_data.size;i++){
+        let k = iterator_map.next().value
+        
+        let obj ={
+            "Features": k,
+            "Spans of devion": devion_data.get(k),
+        }
+        myBooks.push(obj);
+    }*/
+    let text = "<h1>Anomaly Detection Server</h1>"
+    text += "<style>\n table, th, td { \n border: 1px solid black;\n border-collapse: collapse;\n } \n"
+    text += "th, td { padding: 15px; \n text-align: left; \n }\n #t01 tr:nth-child(even)  { \n  background-color: #eee; \n } \n #t01 tr:nth-child(odd) { \n background-color: #fff; \n }\n"
+    text += " #t01 th { \n background-color: black; \n color: white; \n }\n</style>"
+    text += "<table>" 
+    text+= "<table style= \"width:80%\" >\n"
+    text+= "<tr> \n <th> Feature </th> \n <th>Anomalies </th> \n </tr> \n"
+    for(let[key,value] of devion_data){
+        let ano = "";
+        if(value.length>0){
+            let array = value.toString().split(',')
+           for(let i=0; i<array.length;i+=2){
+               ano += array[i] + "-" + array[i+1]+ " "
+            }
+           //ano += value
+           //console.log(ano)
+        }
+        text += " <tr> \n <th>"+ key + "</th> \n <th>" +ano +"</th> \n </tr> \n"
+    }
+    text+= "</table>"
+    //text += " <tr> \n <th>AVIV</th> \n <th>DIMRI</th> \n <th>Age</th> \n </tr> \n <tr> \n  <td>IS</td> \n <td>THE</td> \n <td>KING</td> \n </tr> \n <tr> \n <td>Eve</td> \n<td>Jackson</td> \n <td>94</td> \n </tr> \n </table> "
+    return text;
+}
 app.post('/api/model', (req,res) => {
     console.log("inside post");
     csvData_train = req.files.train.data.toString('utf8');
@@ -49,7 +85,10 @@ app.post('/api/model', (req,res) => {
     let algo = new AlgoAnomalyFile.AlgoAnomaly(data_train,isHybrid,index);
     algo.learnNormal();
     let devion = AlgoAnomalyFile.detect(data_test,index);
-    res.send(devion);
+    let f = create_table(devion)   
+    console.log(f) 
+    //var ht = fs.readFileSync(f , 'utf8');
+    res.send(f);
     index++;
 });
 
