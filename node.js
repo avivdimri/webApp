@@ -61,23 +61,10 @@ function findDev(req) {
 app.post('/api/server', (req, res) => {
     let dev = findDev(req);
     const obj = Object.fromEntries(dev);
-    //let d = JSON.stringify(dev)
     res.send(obj);
 });
 function create_table(devion_data){
-    /*var myBooks = []
-
-    const iterator_map = devion_data.keys();
-
-    for(let i =0;i<devion_data.size;i++){
-        let k = iterator_map.next().value
-        
-        let obj ={
-            "Features": k,
-            "Spans of devion": devion_data.get(k),
-        }
-        myBooks.push(obj);
-    }*/
+   
     let text = "<h1>Anomaly Detection Server</h1>"
     text += "<style>\n table, th, td { \n border: 1px solid black;\n border-collapse: collapse;\n } \n"
     text += "th, td { padding: 15px; \n text-align: left; \n }\n #t01 tr:nth-child(even)  { \n  background-color: #eee; \n } \n #t01 tr:nth-child(odd) { \n background-color: #fff; \n }\n"
