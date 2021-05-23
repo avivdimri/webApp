@@ -163,11 +163,11 @@ function detect(dictionary, id){
 
             }
             if(start==-1){
-                anomalies.set(cf.featcher1, [])
+                anomalies.set(cf.featcher1 +"  <-->  " + cf.featcher2, [])
 
             }else{
                 arrSpan.push([start,end+1]);
-                anomalies.set(cf.featcher1, arrSpan)
+                anomalies.set(cf.featcher1 +"  <-->  " + cf.featcher2, arrSpan)
                 //anomalies[cf.featcher1]=arrSpan;
 
             }

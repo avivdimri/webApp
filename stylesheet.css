@@ -1,0 +1,70 @@
+*{
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+  font-family: "Lato", sans-serif;
+
+
+}
+body {
+  background-color: lightblue;
+  /* background-image: url('American_airlines.jpg'); */
+  background-image: url('./1_lOx9wn5aHGCERvJdkWozuA.jpeg');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center; 
+}
+
+h1 {
+  background-color: rgba(99, 68, 75, 0.432);
+
+  font-family: "Lato", sans-serif;
+    /* color: red; */
+    /* font-family: verdana; */
+    font-size: 300%;
+    height: 100%;
+    /* color: #777; */
+    color: rgb(255, 255, 255);
+    line-height: 1.8;
+    text-align: center;
+  }
+  form{
+    /* background-color: black; */
+    margin-left: auto;
+    margin-right: auto; 
+    /* line-height: "10"; */
+    align-items: center; 
+    /* background-color: red; */
+  }
+  .myIframe{
+    display: block;
+    /* background-color: blue; */
+    margin-left: auto;
+    margin-right: auto;
+    /* align-items: center;  */
+  }
+  table, th,td{
+    /* border: 0.5px solid black; */
+    background-color: rgba(99, 68, 75, 0.432);
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    color: rgb(255, 255, 255);
+    
+  }
+  label{
+    text-align: center; 
+    background-color: rgba(99, 68, 75, 0.432);
+  color: aliceblue;
+  }
+  div {
+    margin: auto;
+    width: 20%;
+    background-color: rgba(99, 68, 75, 0.432);
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+  }
+  
