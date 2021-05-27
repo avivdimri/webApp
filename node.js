@@ -35,7 +35,7 @@ function findDev(req) {
     csvData_test = req.files.test.data.toString('utf8');
     let data_test = parser(csvData_test);
     let isHybrid = false;
-    if (req.query.model_type === 'hybrid') {
+    if (req.body.model_type == 'Hybrid') {
         isHybrid = true;
     }
     AlgoAnomalyFile.collection_train[index] = {};
