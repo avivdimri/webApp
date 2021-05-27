@@ -149,7 +149,7 @@ function detect(dictionary, id){
         let feature1= dictionary[cf.feature1];
         let feature2 = dictionary[cf.feature2];
         
-        //Go over the columns
+        //Go over  the columns
         for(let j =0; j<feature1.length;j++){
             //let point = new AnomalyImport.Point(parseFloat(feature1[j]), parseFloat(feature2[j]));
             let point = new AnomalyImport.Point(feature1[j], feature2[j]);
