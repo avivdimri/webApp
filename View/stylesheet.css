@@ -1,0 +1,269 @@
+*{
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+  font-family: "Lato", sans-serif;
+  border-radius: 14px;
+  transition: all 0.5s;
+  line-height: 1.8;
+  /* font-size: 300%; */
+  border: none;
+}
+body {
+  background-color: lightblue;
+  /* background-image: url('American_airlines.jpg'); */
+  /* background-image: url('./1_lOx9wn5aHGCERvJdkWozuA.jpeg'); */
+  background-image: url('./airbus-passenger-aircraft-family-formation2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center; 
+}
+
+h1 {
+  background-color: rgba(99, 68, 75, 0.774);
+      color: rgb(255, 255, 255);
+
+  font-family: "Lato", sans-serif;
+    /* color: red; */
+    /* font-family: verdana; */
+    font-size: 300%;
+    height: 100%;
+    /* color: #777; */
+    /* color: rgb(255, 255, 255); */
+    line-height: 1.8;
+    text-align: center;
+  }
+  h1:hover {
+    /* background-color: rgba(74, 99, 68, 0.432); */
+    background-color: rgba(74, 99, 68, 0.726);
+    color: rgb(235, 205, 205);
+    font-family: "Lato", sans-serif;
+      /* color: red; */
+      /* font-family: verdana; */
+      font-size: 302%;
+      height: 100%;
+      /* color: #777; */
+      /* color: rgb(250, 177, 177); */
+      line-height: 1.8;
+      text-align: center;
+    }
+    .h_choose{
+      background-color: rgba(99, 68, 75, 0.774);
+      color: rgb(255, 255, 255);
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+        /* color: red; */
+        /* font-family: verdana; */
+        font-size: 160%;
+        height: 10%;
+        width: 40%;
+        /* color: #777; */
+        
+        line-height: 1.8;
+        text-align: center;
+    }
+    .h_choose:hover{
+      background-color: rgba(74, 99, 68, 0.726);
+      color: rgb(235, 205, 205);
+
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+        /* color: red; */
+        /* font-family: verdana; */
+        /* font-size: 300%; */
+        height: 100%;
+        /* color: #777; */
+        
+        line-height: 1.8;
+        text-align: center;
+    }
+  form{
+    /* background-color: black; */
+    margin-left: auto;
+    margin-right: auto; 
+    /* line-height: "10"; */
+    align-items: center; 
+    /* background-color: red; */
+  }
+  .myIframe{
+    display: block;
+    /* background-color: blue; */
+    margin-left: auto;
+    margin-right: auto;
+    /* align-items: center;  */
+  }
+  table, th,td{
+    /* border: 0.5px solid black; */
+    background-color: rgba(99, 68, 75, 0.432);
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  div {
+    margin: auto;
+    width: 20%;
+    background-color: rgba(99, 68, 75, 0.432);
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+  }
+iframe{
+  /* background-color: rgba(99, 68, 75, 0.712); */
+  background-color: rgba(99, 68, 75, 0);
+}
+
+.mySubmit{
+  background-color: rgba(99, 68, 75, 0.774);
+      color: rgb(255, 255, 255);
+  /* color: #260f8d; */
+  width: 150px;
+  font-weight: bold;
+  height:50px;
+  padding: 0px;
+}
+.mySubmit:hover{
+  /* color: #260f8d; */
+  background-color: rgba(74, 99, 68, 0.726);
+  color: rgb(235, 205, 205);
+  width: 150px;
+  height:50px;
+  padding: 0px;
+  font-weight: bold;
+}
+.o1,.o2,select,.t1{
+  background-color: rgba(99, 68, 75, 0.774);
+      color: rgb(255, 255, 255);
+  width: 150px;
+  height: 50px;
+  /* background-color: #f41e296e; */
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+}
+.o1:hover,.o2:hover,select:hover,.t1:hover{
+  background-color: rgba(74, 99, 68, 0.726);
+  color: rgb(235, 205, 205);
+  /* width: 100px; */
+  height: 50px;
+  /* background-color: #f41e296e; */
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  
+}
+select{
+  width: 90px;
+  
+}
+
+td{
+  background-color: rgba(99, 68, 75, 0.774);
+}
+td:hover{
+  background-color: rgba(74, 99, 68, 0.726);
+}
+
+form,table{
+  background-color: #f41e2900;
+}
+  input{
+    /* background-color: rgba(99, 68, 75, 0.774); */
+      color: rgb(255, 255, 255);
+  border-radius: 14px;
+  /* background-color: #f41e296e; */
+  border: none;
+  /* color: #FFFFFF; */
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width:170px;
+  height: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+  /* top: 10%; */
+  
+  }
+  /* .input_train{
+    border-radius: 14px;
+  background-color: #f41e29d0;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 12px;
+  padding: 20px;
+  width:150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  } */
+  input:hover{
+    border-radius: 14px;
+    /* background-color: rgba(74, 99, 68, 0.726); */
+    color: rgb(235, 205, 205);
+  /* background-color: #67da3241; */
+  border: none;
+  /* color: #1f0707; */
+  text-align: center;
+  font-size: 14.4px;
+  padding: 20px;
+  width: 200px;
+  height: 17px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-align: center;
+  }
+
+
+
+  .button{
+    border-radius: 14px;
+    background-color: rgba(124, 86, 96, 0.774);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  input[type=file]::-webkit-file-upload-button {
+    border: none;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #fe9b9bb7;
+    color: #FFFFFF;
+    transition: 1s;
+  }

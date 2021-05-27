@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anoma Detection Server</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+  </head>
+  <body>
+    <h1>Anomaly Detection Server</h1>
+    <form action="/api/model" method="POST" enctype="multipart/form-data" target="result"> 
+    <table>
+        <tr>
+          <td class="td1">train csv_file</td>  
+          <td><input class="input_train" type="file"  accept=".csv" name="train"></td>
+        </tr>
+        <tr>
+          <td class="td2">test csv_file</td>
+          <td><input type="file"  accept=".csv" name="test"></td>
+        </tr>
+    </table>
+  <!-- <br> -->
+  <p id="t01"></p>
+  <h2 class="h_choose" for="model_type">Choose a anomaly Detection:</h2>
+  
+   <select name="model_type" id="model_type">
+     <optgroup class="t1" label="anomaly Detection">
+       <option class="o1" value="Hybrid">Hybrid</option>
+       <option class="o2" value="Regression">Regression</option>
+     </optgroup>
+   </select>
+ 
+   <input class="mySubmit" type="submit" value="Submit >>">
+   <br>
+<iframe name="result" width="60%" height="400">
+
+  <br>
+  <script>
+  window.onload = function(result) {
+    console.log("inside!!");
+    CreateTableFromJSON(result);
+ }</script>
+<p id="t01"></p> 
+</iframe>
+<br>
+
+  <!-- <button class="button" ><span >Hover </span></button> -->
+</form>
+  </body>
+  
+</html>
