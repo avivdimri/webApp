@@ -12,6 +12,8 @@
 }
 body {
   background-color: lightblue;
+  /* background-image: url('American_airlines.jpg'); */
+  /* background-image: url('./1_lOx9wn5aHGCERvJdkWozuA.jpeg'); */
   background-image: url('./airbus-passenger-aircraft-family-formation2.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -69,13 +71,12 @@ h1 {
 
       font-family: "Lato", sans-serif;
       font-weight: bold;
-        /* color: red; */
+       
         /* font-family: verdana; */
         /* font-size: 300%; */
         height: 100%;
-        width: 41%;
         /* color: #777; */
-        
+        width: 41%;
         line-height: 1.8;
         text-align: center;
     }
@@ -128,7 +129,7 @@ iframe{
   /* color: #260f8d; */
   background-color: rgba(74, 99, 68, 0.726);
   color: rgb(235, 205, 205);
-  width: 150px;
+  width: 152px;
   height:50px;
   padding: 0px;
   font-weight: bold;
@@ -185,10 +186,10 @@ form,table{
   cursor: pointer;
   margin: 5px;
   text-align: center;
- 
+  /* top: 10%; */
   
   }
-  
+ 
   input:hover{
     border-radius: 14px;
     /* background-color: rgba(74, 99, 68, 0.726); */
@@ -209,7 +210,51 @@ form,table{
 
 
 
+  .button{
+    border-radius: 14px;
+    background-color: rgba(124, 86, 96, 0.774);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
   
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
   
+  .button:hover span {
+    padding-right: 25px;
+  }
   
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  input[type=file]::-webkit-file-upload-button {
+    border: none;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #fe9b9bb7;
+    color: #FFFFFF;
+    transition: 1s;
+  }
+
+
   
