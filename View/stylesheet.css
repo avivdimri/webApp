@@ -189,19 +189,7 @@ form,table{
   /* top: 10%; */
   
   }
-  /* .input_train{
-    border-radius: 14px;
-  background-color: #f41e29d0;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 12px;
-  padding: 20px;
-  width:150px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  } */
+  
   input:hover{
     border-radius: 14px;
     /* background-color: rgba(74, 99, 68, 0.726); */
