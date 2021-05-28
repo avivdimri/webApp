@@ -210,48 +210,7 @@ form,table{
 
 
 
-  .button{
-    border-radius: 14px;
-    background-color: rgba(124, 86, 96, 0.774);
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  }
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
   
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
   
-  .button:hover span {
-    padding-right: 25px;
-  }
   
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  input[type=file]::-webkit-file-upload-button {
-    border: none;
-    padding: .2em .4em;
-    border-radius: .2em;
-    background-color: #fe9b9bb7;
-    color: #FFFFFF;
-    transition: 1s;
-  }
+  
