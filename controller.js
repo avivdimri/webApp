@@ -97,12 +97,12 @@ app.listen(port);
 
 function create_table(devion_data){
    
-    let text = "<h1>Anomaly Detection Table</h1>"
-    text += "<style>\n table, th, td { \n border: 1px solid black;\n border-collapse: collapse;\n } \n"
+    // let text = "<h1>Anomaly Detection Table</h1>"
+    let text = "<style>\n *{background-color: rgba(124, 86, 96, 0.774);} table, th, td { \n border: 1px solid black;\n border-collapse: collapse;\n } \n"
     text += "th, td { padding: 15px; \n text-align: left; \n }\n #t01 tr:nth-child(even)  { \n  background-color: #eee; \n } \n #t01 tr:nth-child(odd) { \n background-color: #fff; \n }\n"
-    text += " #t01 th { \n background-color: black; \n color: white; \n }\n tr:hover {background-color:#f5f5f5;} \n td { color: white;} \ n h2.hidden { visibility: hidden;; }</style>"
+    text += " #t01 th { \n background-color: black; \n color: white; \n }\n tr:hover {background-color:#f5f5f5;} \n td {background-color: #c74e4e; color: white;} \ n h2.hidden { visibility: hidden;; }</style>"
     text += "<table>" 
-    text+= "<table style= \"width:80%\" >\n"
+    text+= "<table style= \"width:100%\" >\n"
     text+= "<tr> \n <td> Feature </td> \n <td>Anomalies </td> \n </tr> \n"
     for(let[key,value] of devion_data){
         let val = "";
