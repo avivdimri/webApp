@@ -12,8 +12,6 @@
 }
 body {
   background-color: lightblue;
-  /* background-image: url('American_airlines.jpg'); */
-  /* background-image: url('./1_lOx9wn5aHGCERvJdkWozuA.jpeg'); */
   background-image: url('./airbus-passenger-aircraft-family-formation2.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -75,6 +73,7 @@ h1 {
         /* font-family: verdana; */
         /* font-size: 300%; */
         height: 100%;
+        width: 41%;
         /* color: #777; */
         
         line-height: 1.8;
