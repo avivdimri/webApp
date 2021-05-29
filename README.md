@@ -44,11 +44,10 @@ There is a few folders:
 4.In the files folder - there the diles you may upload to the server - train and test file.
 
 # Installation for running the App:
-1. use git clone https://github.com/avivdimri/webApp.git to downloads the project.\
-2. Make sure you already has a node on your computer - if not you may downloads from here for free - https://nodejs.org/en/download/.
-you may use any operation systeam you want.\
-3.Use node contorller.js to run the server.\
-4.Try to connect the server from any browser or progream language to connect the server by port - 8080,you may change it if you want.\
+1. Use git clone https://github.com/avivdimri/webApp.git to downloads the project.
+2. Make sure you already has a node on your computer - if not you may downloads from here for free - https://nodejs.org/en/download/.you may use any operation systeam you want.
+3. Use node contorller.js to run the server.
+4. Try to connect the server from any browser or progream language to connect the server by port - 8080,you may change it if you want.
 5. You may use one or any of the function we declare at the REST-API above.
 
 
