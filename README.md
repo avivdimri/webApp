@@ -2,21 +2,22 @@
 Link to github-https://github.com/avivdimri/webApp. \
 Link for the presentation of Web App- \
 
-A Web app server that implement a REST-API for the clients,and a single web-page.\
-The server is support parallelism requests.which given a flight data - find irregular behavior at the flight and report it to the client.\
-There is tow possible ways to connect to the server -\
-A. by the client web page appliction - the client just need to upload the files and the app will connect to the server by itself.\
-B.by himself - the client could connect dircet to the server and ask for the answers.
+A Web app server that implements a REST-API for the clients,and a single web-page.\
+The server supports parallelism requests. which given a flight data - find irregular behavior at the flight and report it to the client.\
+There is two possible ways to connect to the server -\
+1. By the client web page appliction - the client just need to upload the files and the app will connect to the server by itself.\
+2. By himself - the client could connect dircet to the server and ask for the answers.
 
 ## Collaborators
 This program was developed by four student, Ori Choen, Ori Abramnovich, Aviv Dimri and Yosef Berebi, CS students from Bar-Ilan university, Israel.
 
 ## Code Design:
-Ue use at the node.js technology for the server app,and the client web-page with html&css.all this by the MVC architecture. 
+We use with the node.js technology for the server app, and the client web-page with html&css. all this by the MVC architecture. 
+
 ## REST-API:
-The sever is bind to the port - 8080 and the ip his your localhost if you downloads this project to your own computer.\
-There is a few http functions that we are support and we will exstend for each one of them which type it and what it is url -\
-1.GET - '/' - by the '/' the client will get the web-page that he can connect to the server from there - \
+The sever is bind to the port - 8080 and the ip is your localhost if you download this project to your own computer.
+There are a few http functions that the API supports and  will extend for each one of them which type is it and what it is url.
+1. GET - '/' - by the '/' the client will get the web-page that he can connect to the server from there - \
 The client shold upload tow files - train and test file,and also to choose with which algoritem he want to test the flight.\
 There is tow possible algoritem -\
 A. Line Regression.\
