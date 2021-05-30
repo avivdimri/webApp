@@ -63,6 +63,9 @@ The controller create dynamic table accordingly to the data which he got from th
 
 ![UML](https://user-images.githubusercontent.com/80414213/120098860-f062b300-c140-11eb-87eb-0e46f113292d.png)
 
+<img width="1432" alt="UML_extended" src="https://user-images.githubusercontent.com/80414213/120101268-ff9c2d80-c14d-11eb-8bb9-0c790a6e10ce.png">
+
+
 
 
 
