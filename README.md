@@ -18,31 +18,31 @@ We use with the node.js technology for the server app, and the client web-page w
 The sever is bind to the port - 8080 and the ip is your localhost if you download this project to your own computer.
 There are a few http functions that the API supports and  will extend for each one of them which type is it and what it is url.
 1. GET - '/' - by the '/' the client will get the web-page that he can connect to the server from there - \
-The client shold upload tow files - train and test file,and also to choose with which algoritem he want to test the flight.\
-There is tow possible algoritem -\
+The client shold upload two files - train and test file, and also to choose  which algoritem he want to test the flight.\
+There are two possible algoritems -\
 A. Line Regression.\
 B. MinCircle.\
-After uploading the files - the server return him which features has irregular activity and went the devion start and when its ended.
+After uploading the files - the server return him which features have irregular activity and when the devion started and when its ended.
 
 2.GET- /api/amodel - given a id of the client the server will return is status by a json, the given id should by at the query with the name 'model_type'.
 
 3.GET- /api/amodels - the server will return all the clients that where connect to him by a json.
 
-4.POST -/api/anomaly -the client should upload tow files - if just one of them will upload the server will return an error,\
-the manes of the files should be at the body request by the name - train and test.And the server will return the irregular activity by json to the client.
+4.POST -/api/detect -the client should upload two files - if just one of them will upload the server will return an error,\
+the names of the files should be at the body request by the name - train and test. And the server will return the irregular activity by json to the client.
 
 5.DELETE - /api/model - given an id of the client - the server will erase him from his list of models.
 
 ## Structure project:
-There is a few folders:
+There are a few folders:
 
 1.In the view folder you have the the view control for the web-page.
 
 2.In the Model folder - there is the model server that do all the work behind.
 
-3.In node_models folder there is all the liberys you need.
+3.In node_models folder there are all the liberys you need.
 
-4.In the files folder - there the diles you may upload to the server - train and test file.
+4.In the files folder - there are the files you may upload to the server - train and test file.
 
 # Installation for running the App:
 1. Use git clone https://github.com/avivdimri/webApp.git to downloads the project.
