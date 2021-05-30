@@ -28,7 +28,7 @@ After uploading the files - the server return him which features have irregular 
 
 3.GET- /api/amodels - the server will return all the clients that where connect to him by a json.
 
-4.POST -/api/detect -the client should upload two files - if just one of them will upload the server will return an error,\
+4.POST -/detect -the client should upload two files - if just one of them will upload the server will return an error,\
 the names of the files should be at the body request by the name - train and test. And the server will return the irregular activity by json to the client.
 
 5.DELETE - /api/model - given an id of the client - the server will erase him from his list of models.
@@ -52,13 +52,13 @@ There are a few folders:
 5. You may use one or any of the function we declare at the REST-API above.
 
 ## UML:
-We can see in the UML below of the App which based on the MVC architecture. We bulided the View and then put them in the Main Window. Every View has View Model of its own, which is as the model for the View. For the View, it is an abstraction of the Model.It passes commands from the view to the model.
-
-The Views Model Converts model information into view information. The Model and every View Model Implement INotifyPropertyChanged interface and notify about changes for the observers like a View Model or View. The views Model get notifications from the model by adding delegates to its PropertyChangedevent. Eventually we used Data binding within the UI.
-
-If a View want to make change in the model we used with functions.
-
-Also, the Model has a client which resposinble about the connection with the Flight Gear Simulator. In the left side we can see that the View of the Graph has a member of dinamic dll which responsible on the connect of the dll View to the Main Window. The dll can be any algorithm whichimplement the interrface by name IntrfaceDll which contain the 3 function Create,Update,Time(its cut in the picture)
+We can see in the UML below of the App which based on the MVC architecture.The User can use in thw web app(The View) to send http request to the the controller. Then the controller which implements the REST-API, which mentioned above, and activate the Model to make all the calculations behinds. 
+Then the model return all the relevant information to the controller and update the all the data.
+Finally the controller send back to the View the relevant html with the response and the Browser parse the View and show to the User the response of the server.
+ 
+In our app,the request of the User can be the home page of the web app,or the http post request to upload the files and to request the anomalies in the test. 
+The controller call to the model(Anomaly detector) which find the relevant anmalies and return to the controller.
+The controller create dynamic table accordingly to the data which he got from the model and send it to the view and show the relevant anomalies to the User.
 
 
 ![UML](https://user-images.githubusercontent.com/80414213/120098860-f062b300-c140-11eb-87eb-0e46f113292d.png)
