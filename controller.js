@@ -75,7 +75,7 @@ app.delete('/api/model', (req,res) => {
     }
    
 });
-app.post('/api/anomaly', (req,res) => {
+app.post('/api/detect', (req,res) => {
     if(req.files.train == undefined){
         res.send("There is no train file - please upload train file!");
         return
