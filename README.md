@@ -51,7 +51,17 @@ There are a few folders:
 4. Try to connect the server from any browser or progream language to connect the server by port - 8080,you may change it if you want.
 5. You may use one or any of the function we declare at the REST-API above.
 
+## UML:
+We can see in the UML below of the App which based on the MVC architecture. We bulided the View and then put them in the Main Window. Every View has View Model of its own, which is as the model for the View. For the View, it is an abstraction of the Model.It passes commands from the view to the model.
 
+The Views Model Converts model information into view information. The Model and every View Model Implement INotifyPropertyChanged interface and notify about changes for the observers like a View Model or View. The views Model get notifications from the model by adding delegates to its PropertyChangedevent. Eventually we used Data binding within the UI.
+
+If a View want to make change in the model we used with functions.
+
+Also, the Model has a client which resposinble about the connection with the Flight Gear Simulator. In the left side we can see that the View of the Graph has a member of dinamic dll which responsible on the connect of the dll View to the Main Window. The dll can be any algorithm whichimplement the interrface by name IntrfaceDll which contain the 3 function Create,Update,Time(its cut in the picture)
+
+
+![UML](https://user-images.githubusercontent.com/80414213/120098860-f062b300-c140-11eb-87eb-0e46f113292d.png)
 
 
 
