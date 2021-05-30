@@ -24,14 +24,14 @@ A. Line Regression.\
 B. MinCircle.\
 After uploading the files - the server return him which features have irregular activity and when the devion started and when its ended.
 
-2.GET- /api/amodel - given a id of the client the server will return is status by a json, the given id should by at the query with the name 'model_type'.
+2. GET- /api/amodel - given a id of the client the server will return is status by a json, the given id should by at the query with the name 'model_type'.
 
-3.GET- /api/amodels - the server will return all the clients that where connect to him by a json.
+3. GET- /api/amodels - the server will return all the clients that where connect to him by a json.
 
-4.POST -/detect -the client should upload two files - if just one of them will upload the server will return an error,\
+4. POST -/detect -the client should upload two files - if just one of them will upload the server will return an error,\
 the names of the files should be at the body request by the name - train and test. And the server will return the irregular activity by json to the client.
 
-5.DELETE - /api/model - given an id of the client - the server will erase him from his list of models.
+5. DELETE - /api/model - given an id of the client - the server will erase him from his list of models.
 
 ## Structure project:
 There are a few folders:
